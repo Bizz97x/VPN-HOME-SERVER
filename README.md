@@ -36,6 +36,20 @@ Ce projet documente la mise en place complète d'un **serveur VPN personnel** h�
 
 ---
 
+## Screenshot
+
+#### Connection SSH réussie
+
+Voici la connexion réussie au server EC2 Ubuntu via SSH avec le nom de domaine dynamique `bizzvpn.ddns.net` : 
+![Connecion SSH réussie](screenshots/Connection-SSH.png)
+
+- Interface No-IP avec domaine `bizzvpn.ddns.net` actif
+
+
+  ---
+
+  
+
 
 
 
