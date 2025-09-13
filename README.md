@@ -1,4 +1,11 @@
 # 🌐 VPN-HOME-SERVER
+
+![Ubuntu](https://img.shields.io/badge/OS-Ubuntu%2024.04-E95420?logo=ubuntu)
+![EC2](https://img.shields.io/badge/Hosted_on-AWS_EC2-FF9900?logo=amazon-aws)
+![VPN](https://img.shields.io/badge/VPN-Home_Server-blue)
+![License](https://img.shields.io/badge/License-Pedagogical-lightgrey)
+
+
 Configuration d’un serveur VPN personnel sur un VPS Ubuntu distant : SSH par clé, pare-feu, DNS dynamique (No-IP), sécurisation et documentation complète.
 
 Ce projet documente la mise en place complète d'un **serveur VPN personnel** hébergé sur un VPS Ubuntu, avec gestion DNS dynamique, connexion SSH sécurisée et outils système essentiels.
