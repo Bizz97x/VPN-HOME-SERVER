@@ -1,18 +1,20 @@
 # 🌐 VPN-HOME-SERVER
 Configuration d’un serveur VPN personnel sur un VPS Ubuntu distant : SSH par clé, pare-feu, DNS dynamique (No-IP), sécurisation et documentation complète.
 
-Ce projet documente la mise en place complète d'un **serveur VPN personnel** hébergé sur un VPS Ubutun, avec gestion DNS dynamique, connexion SSH sécurisée et outils système essentils.
+Ce projet documente la mise en place complète d'un **serveur VPN personnel** hébergé sur un VPS Ubuntu, avec gestion DNS dynamique, connexion SSH sécurisée et outils système essentiels.
 
-## Objectifs du projet
+---
+
+## 🎯 Objectifs du projet
 
 - Créer un serveur accessible à distance via un nom de domaine dynamique.
-- Sécuriser l'accès SSh (clé privé `.pem`, désactivation de l'utilisateur root si souhaité)??
+- Sécuriser l'accès SSH (clé privé `.pem`, désactivation de l'utilisateur root si souhaité)??
 - Ajouter un service VPN (prochaine étape : Wireguard).
 - Documenter toutes les étapes pour les reproduire.
   
 ---
 
-## Stack Utilisée
+## 🧰 Stack Utilisée
 
 | Outil / Service       | Rôle                                          |
 |-----------------------|-----------------------------------------------|
@@ -24,7 +26,7 @@ Ce projet documente la mise en place complète d'un **serveur VPN personnel** h�
 
 ---
 
-## Etapes réalisées
+## ✅ Étapes réalisées
 
 1. Géneration & sécurisation de la clé `.pem`
 2.  Paramétrage des droits Windows sur la clé (chmod 600 équivalent)
@@ -36,11 +38,11 @@ Ce projet documente la mise en place complète d'un **serveur VPN personnel** h�
 
 ---
 
-## Screenshot
+## Captures d'écran
 
 - #### Connection SSH réussie
 
-Voici la connexion réussie au server EC2 Ubuntu via SSH avec le nom de domaine dynamique `bizzvpn.ddns.net` : 
+Connexion réussie au server EC2 Ubuntu via SSH avec le nom de domaine dynamique `bizzvpn.ddns.net` : 
 
 ![Connection SSH réussie](./Screenshots/Connection-SSH.PNG)
 
@@ -53,6 +55,13 @@ Voici un aperçu de la configuration du domaine dynamique `bizzvpn.ddns.net` via
 
 
   ---
+
+## ✍️ Auteur
+
+[Randy Bizet](https://github.com/Bizz97x)  
+Etudiant en Mastère Architecture des Systèmes d’Information à ETNA  
+Passionné par les systèmes, réseaux et virtualisation.
+
 
   
 
