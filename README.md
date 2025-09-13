@@ -18,6 +18,7 @@ Ce projet documente la mise en place complète d'un **serveur VPN personnel** h�
 - Sécuriser l'accès SSH (clé privé `.pem`, désactivation de l'utilisateur root si souhaité)??
 - Ajouter un service VPN (prochaine étape : Wireguard).
 - Documenter toutes les étapes pour les reproduire.
+
   
 ---
 
@@ -31,6 +32,7 @@ Ce projet documente la mise en place complète d'un **serveur VPN personnel** h�
 | No-IP (DDNS)          | DNS dynamique (ex. `bizzvpn.ddns.net`)        |
 | PowerShell + WSL      | Connexions depuis Windows                     |
 
+
 ---
 
 ## ✅ Étapes réalisées
@@ -42,6 +44,7 @@ Ce projet documente la mise en place complète d'un **serveur VPN personnel** h�
 5.  Mise à jour automatique de l'IP publique via No-IP
 6.  Test de connexion depuis Windows (`ssh -i .\azerty.pem ubuntu@bizz.ddns.net`)
 7.  (à venir) Installation et configuration d'un serveur **Wireguard**
+
 
 ---
 
@@ -65,7 +68,7 @@ Voici un aperçu de la configuration du domaine dynamique `bizzvpn.ddns.net` via
 
 ## ✍️ Auteur
 
-[Randy Bizet](https://github.com/Bizz97x)  
+[Randy BIZET](https://github.com/Bizz97x)  
 Etudiant en Mastère Architecture des Systèmes d’Information à ETNA  
 Passionné par les systèmes, réseaux et virtualisation.
 
