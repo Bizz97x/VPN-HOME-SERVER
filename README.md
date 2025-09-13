@@ -48,7 +48,7 @@ Voici la connexion réussie au server EC2 Ubuntu via SSH avec le nom de domaine 
 
 Voici un aperçu de la configuration du domaine dynamique `bizzvpn.ddns.net` via l’interface No-IP
 
-![Inferface No-IP](./Screenshots/Interface-No-IP.png)
+![Inferface No-IP](./Screenshots/Interface-No-IP.PNG)
 
 
 
