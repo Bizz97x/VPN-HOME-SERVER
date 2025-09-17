@@ -1,4 +1,4 @@
-# 🌐 VPN-HOME-SERVER
+# 🌐 VPN-HOME-SERVER . Wireguard + No-IP sur EC2 Ubuntu
 
 ![Ubuntu](https://img.shields.io/badge/OS-Ubuntu%2024.04-E95420?logo=ubuntu)
 ![EC2](https://img.shields.io/badge/Hosted_on-AWS_EC2-FF9900?logo=amazon-aws)
@@ -10,12 +10,22 @@ Configuration d’un serveur VPN personnel sur un VPS Ubuntu distant : SSH par c
 
 Ce projet documente la mise en place complète d'un **serveur VPN personnel** hébergé sur un VPS Ubuntu, avec gestion DNS dynamique, connexion SSH sécurisée et outils système essentiels.
 
+
+## 📚 Sommaire
+
+- [🎯 Objectifs du projet](#-objectifs-du-projet)
+- [🧰 Stack Utilisée](#-stack-utilisée)
+- [✅ Étapes réalisées](#-étapes-réalisées)
+- [📸 Captures d'écran](#captures-décran)
+- [✍️ Auteur](#️-auteur)
+
+
 ---
 
 ## 🎯 Objectifs du projet
 
 - Créer un serveur accessible à distance via un nom de domaine dynamique.
-- Sécuriser l'accès SSH (clé privé `.pem`, désactivation de l'utilisateur root si souhaité)??
+- Sécuriser l'accès SSH (clé privé `.pem`, désactivation de l'accès root)
 - Ajouter un service VPN (prochaine étape : Wireguard).
 - Documenter toutes les étapes pour les reproduire.
 
@@ -30,7 +40,7 @@ Ce projet documente la mise en place complète d'un **serveur VPN personnel** h�
 | SSH                   | Connexion sécurisée par clé privée `.pem`     |
 | UFW                   | Pare-feu (ouverture port SSH uniquement)      |
 | No-IP (DDNS)          | DNS dynamique (ex. `bizzvpn.ddns.net`)        |
-| Wireguard             | VPN sécurisé (UDP 65193                       |
+| WireGuard             | VPN sécurisé (UDP 65193)                      |
 | PowerShell + WSL      | Connexions depuis Windows                     |
 
 
@@ -52,7 +62,9 @@ Ce projet documente la mise en place complète d'un **serveur VPN personnel** h�
     TCP 22 (SSH)
     USP 65193 (Wireguard)
 
-### Installation de Wireguard
+### Installation et configuration de Wireguard
+
+`sudo apt update && sudo apt install wireguard`
 
 - Installtion de Wireguard sur Ubuntu :
 - sudo apt install wireguard
@@ -61,7 +73,7 @@ Ce projet documente la mise en place complète d'un **serveur VPN personnel** h�
   
     Configuration du fichier `wg0.conf` sur le serveur
       IP LOCAL
-      Port
+      Port: 65193
       Routage et NAT avec `iptables`
 
     Configuration du fichier `wg0.conf` sur le client (Windows)
@@ -96,6 +108,16 @@ Voici un aperçu de la configuration du domaine dynamique `bizzvpn.ddns.net` via
 ![Inferface No-IP](./Screenshots/Interface-No-IP.PNG)
 
 - #### Configuration Wireguard côté Windows
+
+![Configuration Wireguard Windows](./Screenshots/Configuration-Wireguard-Windows.PNG)
+
+
+
+
+
+  
+
+
 
 
 
