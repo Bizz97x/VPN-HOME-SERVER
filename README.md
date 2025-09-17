@@ -26,7 +26,7 @@ Ce projet documente la mise en place complète d'un **serveur VPN personnel** h�
 
 - Créer un serveur accessible à distance via un nom de domaine dynamique.
 - Sécuriser l'accès SSH (clé privé `.pem`, désactivation de l'accès root)
-- Ajouter un service VPN (prochaine étape : Wireguard).
+- Ajouter un service VPN.
 - Documenter toutes les étapes pour les reproduire.
 
   
