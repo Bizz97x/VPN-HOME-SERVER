@@ -30,20 +30,53 @@ Ce projet documente la mise en place complète d'un **serveur VPN personnel** h�
 | SSH                   | Connexion sécurisée par clé privée `.pem`     |
 | UFW                   | Pare-feu (ouverture port SSH uniquement)      |
 | No-IP (DDNS)          | DNS dynamique (ex. `bizzvpn.ddns.net`)        |
+| Wireguard             | VPN sécurisé (UDP 65193                       |
 | PowerShell + WSL      | Connexions depuis Windows                     |
+
 
 
 ---
 
 ## ✅ Étapes réalisées
 
-1. Géneration & sécurisation de la clé `.pem`
-2.  Paramétrage des droits Windows sur la clé (chmod 600 équivalent)
+### Mise en place du serveur
+
+1. Création d'une instance EC2 Ubuntu sur AWS
+2. Géneration & sécurisation de la clé `.pem`
+3.  Paramétrage des droits Windows sur la clé (chmod 600 équivalent)
 3.  Création du domaine dynamique sur [No-IP](https://www.noip.com/)
 4.  Installation du **No-IP DUC** (`nopi2`) sur le serveur
 5.  Mise à jour automatique de l'IP publique via No-IP
 6.  Test de connexion depuis Windows (`ssh -i .\azerty.pem ubuntu@bizz.ddns.net`)
-7.  (à venir) Installation et configuration d'un serveur **Wireguard**
+7.  Ouverture des ports nécessaires dans le groupe de sécurité AWS :
+    TCP 22 (SSH)
+    USP 65193 (Wireguard)
+
+### Installation de Wireguard
+
+- Installtion de Wireguard sur Ubuntu :
+- sudo apt install wireguard
+
+  Génération des paires de clés serveur et client
+  
+    Configuration du fichier `wg0.conf` sur le serveur
+      IP LOCAL
+      Port
+      Routage et NAT avec `iptables`
+
+    Configuration du fichier `wg0.conf` sur le client (Windows)
+      Endpoint : [Entrer l'adresse DNS]
+      Adresse client :
+      DNS personalisé : 1.1.1.1
+
+  ### Test de Connectivité
+
+    Connection VPN établie depuis Windows
+    IP publique remplacé par celle du serveur
+    Fonctionne sur:
+        Partage 4G
+        Réseau étudiant (Résidence Universitaire)
+  
 
 
 ---
@@ -61,6 +94,8 @@ Connexion réussie au server EC2 Ubuntu via SSH avec le nom de domaine dynamique
 Voici un aperçu de la configuration du domaine dynamique `bizzvpn.ddns.net` via l’interface No-IP
 
 ![Inferface No-IP](./Screenshots/Interface-No-IP.PNG)
+
+- #### Configuration Wireguard côté Windows
 
 
 
