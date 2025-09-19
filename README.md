@@ -88,7 +88,17 @@ Ce projet documente la mise en place complète d'un **serveur VPN personnel** h�
     Fonctionne sur:
         Partage 4G
         Réseau étudiant (Résidence Universitaire)
-  
+
+  ### Sécurisation du serveur avec UFW
+
+   - Installation de UFW
+   - Ouverture des port nécessaire SSH, Wireguard, Nginx (Seulemnt ses trois ports       auront accès)
+   - Activation du pare-feu : `sudo ufw enable`
+ 
+
+  ### Page d'accueil TRÈS simple (HTTP)
+
+   - Création d'un fichier HTML dans /var/www/html/index.html
 
 
 ---
